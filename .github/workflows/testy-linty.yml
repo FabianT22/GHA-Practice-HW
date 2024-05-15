@@ -45,6 +45,15 @@ jobs:
             - name: Install Dependencies
               run: npm ci
             - name: Build it
-              run: npm build
+              run: npm run build
             - name: Build Complete echo
               run: echo "Build has been complete"
+
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Do the deploy
+              uses: echo "Deploying..."
+            - name: Completed echo
+              uses: echo "Deploy Completed!"
