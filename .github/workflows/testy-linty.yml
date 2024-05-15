@@ -54,6 +54,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Do the deploy
-              uses: echo "Deploying..."
+              run: echo "Deploying..."
             - name: Completed echo
-              uses: echo "Deploy Completed!"
+              run: echo "Deploy Completed!"
