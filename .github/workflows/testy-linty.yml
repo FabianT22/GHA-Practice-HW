@@ -1,0 +1,24 @@
+name: Linting, Test, Deploy
+on: [push, workflow_dispatch]
+jobs:
+    linting:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code
+              uses: actions/checkout@v2
+            - name: Install nodeJS
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
+            - name: Does the linting
+              uses: .eslintrc.json
+
+    # testing:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - 
+    #         - uses: actions/checkout@v2
+    #         - uses: MainContent.test.jsx
+
+
+    
