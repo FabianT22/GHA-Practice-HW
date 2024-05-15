@@ -18,6 +18,7 @@ jobs:
               run: echo "Linting complete"
  
     testing:
+        needs: linting
         runs-on: ubuntu-latest
         steps:
             - name: Get code
