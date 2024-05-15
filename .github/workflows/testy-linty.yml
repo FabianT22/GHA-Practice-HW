@@ -11,7 +11,7 @@ jobs:
               with:
                 node-version: 18
             - name: Does the linting
-              uses: .eslintrc.json
+              uses: root/.eslintrc.json
 
     # testing:
     #     runs-on: ubuntu-latest
